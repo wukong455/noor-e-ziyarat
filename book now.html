@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOOR-E-ZIYARAT - Book Your Spiritual Journey</title>
+    <link rel="icon" type="image/png" href="favicon noor.png">
+    <style>
+        :root {
+            --primary-color: #1a5f2a;
+            --secondary-color: #d4af37;
+            --light-color: #f5f5f5;
+            --dark-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f9f9f9;
+            padding: 0;
+            margin: 0;
+        }
+
+        .booking-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 15px;
+        }
+
+        .form-header h1 {
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .form-header p {
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .booking-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-section {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .form-section h2 {
+            color: var(--primary-color);
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+        }
+
+        .radio-option input {
+            margin-right: 5px;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background-color: #134622;
+        }
+
+        .btn-block {
+            width: 100%;
+        }
+
+        .required-field::after {
+            content: " *";
+            color: red;
+        }
+
+        @media (max-width: 768px) {
+            .booking-form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="booking-container">
+        <div class="form-header">
+            <h1>Book Your Spiritual Journey</h1>
+            <p>Complete the form below to reserve your spot for a blessed pilgrimage</p>
+        </div>
+
+        <form class="booking-form" action="thankyou.html" method="POST">
+            <div class="form-section full-width">
+                <h2>Personal Information</h2>
+                <div class="form-group">
+                    <label class="required-field" for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="required-field" for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="required-field" for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="passport">Passport Number</label>
+                    <input type="text" id="passport" name="passport" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country of Residence</label>
+                    <input type="text" id="country" name="country" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-section full-width">
+                <h2>Journey Details</h2>
+                <div class="form-group">
+                    <label class="required-field" for="package">Select Package</label>
+                    <select id="package" name="package" class="form-control" required>
+                        <option value="">-- Select a pilgrimage package --</option>
+                        <option value="hajj">Hajj Package (Complete Pilgrimage)</option>
+                        <option value="umrah">Umrah Package (Minor Pilgrimage)</option>
+                        <option value="arbaeen">Arbaeen Walk Package</option>
+                        <option value="karbala">Karbala & Najaf Ziyarat</option>
+                        <option value="makkah-madinah">Makkah & Madinah Tour</option>
+                        <option value="custom">Custom Itinerary</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="required-field" for="departure">Preferred Departure Date</label>
+                    <input type="date" id="departure" name="departure" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="required-field" for="duration">Duration (Days)</label>
+                    <input type="number" id="duration" name="duration" class="form-control" min="7" max="60" required>
+                </div>
+            </div>
+
+            <div class="form-section full-width">
+                <h2>Group Information</h2>
+                <div class="form-group">
+                    <label class="required-field">Traveling With</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="alone" name="group" value="alone" checked>
+                            <label for="alone">Alone</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="family" name="group" value="family">
+                            <label for="family">With Family</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="group" name="group" value="group">
+                            <label for="group">With Group</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="groupSize">Number of Travelers</label>
+                    <input type="number" id="groupSize" name="groupSize" class="form-control" min="1" max="50">
+                </div>
+
+                <div class="form-group">
+                    <label for="children">Number of Children (Under 12)</label>
+                    <input type="number" id="children" name="children" class="form-control" min="0" max="20">
+                </div>
+            </div>
+
+            <div class="form-section full-width">
+                <h2>Special Requirements</h2>
+                <div class="form-group">
+                    <label for="accomodation">Accommodation Preference</label>
+                    <select id="accomodation" name="accomodation" class="form-control">
+                        <option value="">-- Select preference --</option>
+                        <option value="economy">Economy (Shared)</option>
+                        <option value="standard">Standard</option>
+                        <option value="deluxe">Deluxe</option>
+                        <option value="premium">Premium (Close to Haram)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="dietary">Dietary Requirements</label>
+                    <textarea id="dietary" name="dietary" class="form-control" placeholder="Any special dietary requirements..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="medical">Medical Conditions</label>
+                    <textarea id="medical" name="medical" class="form-control" placeholder="Any medical conditions we should be aware of..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="requests">Special Requests</label>
+                    <textarea id="requests" name="requests" class="form-control" placeholder="Any additional requests or comments..."></textarea>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <button type="submit" class="btn btn-block">Submit Booking Request</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+

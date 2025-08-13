@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - NOOR-E-ZIYARAT</title>
+    <link rel="icon" type="image/png" href="favicon noor.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .thankyou-popup {
+            background-color: #f8f5f0;
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .symbol {
+            margin-bottom: 20px;
+        }
+
+        .symbol img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        h1 {
+            color: #2a6b2b;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .signature {
+            margin-top: 20px;
+            font-style: italic;
+            color: #2a6b2b;
+            font-weight: 600;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .decoration {
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, #2a6b2b, #d4af37);
+            top: 0;
+            left: 0;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            color: #555;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .close-btn:hover {
+            color: #2a6b2b;
+        }
+    </style>
+</head>
+<body>
+    <div class="thankyou-popup">
+        <div class="decoration"></div>
+        <span class="close-btn" onclick="window.location.href='index.html';">&times;</span>
+        <div class="symbol">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/734eba5f-fc65-4069-a970-0083e295f18b.png" alt="Gold-colored simple Kaaba silhouette on green background" />
+        </div>
+        <h1>شكراً لك</h1>
+        <h1>Thank You</h1>
+        <p>
+            Your submission has been received. May Allah accept your intention for this sacred journey 
+            and grant you safety, ease, and blessings throughout your pilgrimage.
+        </p>
+        <p>
+            Our team will contact you shortly to assist you in planning your spiritual journey.
+        </p>
+        <div class="signature">NOOR-E-ZIYARAT Team</div>
+    </div>
+<script>
+        document.querySelector('.close-btn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirects to home
+        });
+    </script>
+</body>
+</html>
+
